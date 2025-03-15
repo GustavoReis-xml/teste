@@ -20,7 +20,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyA34Dhu6E-o8jY3NEjgG7poqCAk7hb5VzM">
+    <LoadScript googleMapsApiKey="CHAVE">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
