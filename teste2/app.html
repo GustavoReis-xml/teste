@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa com Google Maps</title>
+  <!-- Estilos básicos -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Carregar a API do Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA34Dhu6E-o8jY3NEjgG7poqCAk7hb5VzM
+    &callback=initMap"
+    async
+    defer
+  ></script>
+
+  <script>
+    // Função para inicializar o mapa
+    function initMap() {
+      // Localização para o mapa (exemplo: São Paulo)
+      const location = { lat: -23.55052, lng: -46.633308 };
+
+      // Criação do mapa
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: location,
+      });
+
+      // Adicionando um marcador no mapa
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    }
+  </script>
+</body>
+</html>
